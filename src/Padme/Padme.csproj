@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ErrorReport>none</ErrorReport>
+    <Description>A .NET implementation of PADMÉ padding.</Description>
+    <Copyright>Copyright (c) 2021 Samuel Lucas</Copyright>
+    <PackageProjectUrl>https://github.com/samuel-lucas6/PADME.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/samuel-lucas6/PADME.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>padme;padme-padding;padding;crypto;cryptography</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+</Project>
