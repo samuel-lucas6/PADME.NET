@@ -2,17 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <ErrorReport>none</ErrorReport>
+    <RootNamespace>Padme</RootNamespace>
+    <AssemblyName>PADME</AssemblyName>
     <Description>A .NET implementation of PADMÉ padding.</Description>
-    <Copyright>Copyright (c) 2021 Samuel Lucas</Copyright>
+    <Authors>Samuel Lucas</Authors>
+    <Copyright>Copyright (c) 2021-2022 Samuel Lucas</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/samuel-lucas6/PADME.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/samuel-lucas6/PADME.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>padme;padme-padding;padding;crypto;cryptography</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <PackageTags>padme padme-padding padding crypto cryptography</PackageTags>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ErrorReport>none</ErrorReport>
   </PropertyGroup>
 
 </Project>

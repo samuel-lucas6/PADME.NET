@@ -1,8 +1,6 @@
-﻿using System.Numerics;
-
-/*
+﻿/*
     PADME.NET: A .NET implementation of PADMÉ padding.
-    Copyright (c) 2021 Samuel Lucas
+    Copyright (c) 2021-2022 Samuel Lucas
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of
     this software and associated documentation files (the "Software"), to deal in
@@ -23,24 +21,25 @@
     SOFTWARE.
 */
 
-namespace Padme
-{
-    public class PADME
-    {
-        public static int GetPaddedLength(int length)
-        {
-            if (length == 0) { return 0; }
-            ulong ulongLength = Convert.ToUInt64(length);
-            int exponent = 63 - BitOperations.LeadingZeroCount(ulongLength);
-            int exponentBits = 64 - BitOperations.LeadingZeroCount(Convert.ToUInt64(exponent));
-            int lowBitsToSetToZero = exponent - exponentBits;
-            ulong mask = (Convert.ToUInt64(1) << lowBitsToSetToZero) - 1;
-            return (int)((ulongLength + mask) & ~mask);
-        }
+using System.Numerics;
 
-        public static int GetPaddingLength(int length)
-        {
-            return GetPaddedLength(length) - length;
-        }
+namespace Padme;
+
+public static class PADME
+{
+    public static int GetPaddedLength(int length)
+    {
+        if (length == 0) { return 0; }
+        ulong ulongLength = Convert.ToUInt64(length);
+        int exponent = 63 - BitOperations.LeadingZeroCount(ulongLength);
+        int exponentBits = 64 - BitOperations.LeadingZeroCount(Convert.ToUInt64(exponent));
+        int lowBitsToSetToZero = exponent - exponentBits;
+        ulong mask = (Convert.ToUInt64(1) << lowBitsToSetToZero) - 1;
+        return (int)((ulongLength + mask) & ~mask);
+    }
+
+    public static int GetPaddingLength(int length)
+    {
+        return GetPaddedLength(length) - length;
     }
 }
