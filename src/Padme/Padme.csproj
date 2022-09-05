@@ -11,11 +11,9 @@
     <PackageProjectUrl>https://github.com/samuel-lucas6/PADME.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/samuel-lucas6/PADME.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.2</Version>
     <PackageTags>padme padme-padding padding crypto cryptography</PackageTags>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>

@@ -27,18 +27,17 @@ namespace Padme;
 
 public static class PADME
 {
-    public static int GetPaddedLength(int length)
+    public static ulong GetPaddedLength(ulong length)
     {
         if (length == 0) { return 0; }
-        ulong ulongLength = Convert.ToUInt64(length);
-        int exponent = 63 - BitOperations.LeadingZeroCount(ulongLength);
-        int exponentBits = 64 - BitOperations.LeadingZeroCount(Convert.ToUInt64(exponent));
-        int lowBitsToSetToZero = exponent - exponentBits;
-        ulong mask = (Convert.ToUInt64(1) << lowBitsToSetToZero) - 1;
-        return (int)((ulongLength + mask) & ~mask);
+        int exponent = 63 - BitOperations.LeadingZeroCount(length);
+        int exponentBits = 64 - BitOperations.LeadingZeroCount((ulong)exponent);
+        int zeroBits = exponent - exponentBits;
+        ulong mask = ((ulong)1 << zeroBits) - 1;
+        return (length + mask) & ~mask;
     }
 
-    public static int GetPaddingLength(int length)
+    public static ulong GetPaddingLength(ulong length)
     {
         return GetPaddedLength(length) - length;
     }
